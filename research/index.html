@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>EIDL Discharge Empirical Research &mdash; Open Bankruptcy Project</title>
+<meta name="description" content="Empirical research on EIDL and SBA loan discharge in federal bankruptcy: filing patterns, fraud-AP volume, and post-COVID trends.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://eidl.openbankruptcyproject.org/research/">
+<meta property="og:title" content="EIDL Discharge Empirical Research">
+<meta property="og:description" content="Open dataset of EIDL/SBA-loan discharge proceedings.">
+<meta property="og:type" content="website">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FTWLM223G7"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());gtag('config','G-FTWLM223G7');</script>
+<style>
+body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+max-width:820px;margin:0 auto;padding:2rem 1rem;line-height:1.65;color:#1a1a1a;background:#fafafa}
+h1{font-size:2rem;margin:0 0 0.5rem}
+h2{font-size:1.4rem;margin:2rem 0 0.75rem;color:#0c5cb6}
+.lead{font-size:1.1rem;color:#444;margin:0 0 2rem}
+.tag{display:inline-block;padding:0.15rem 0.6rem;background:#0c5cb6;color:#fff;font-size:0.75rem;border-radius:3px;margin-bottom:1rem}
+.callout{padding:1rem 1.25rem;background:#fff8e0;border-left:4px solid #d4a900;margin:1.5rem 0}
+.related{padding:1rem 1.25rem;background:#f4f8fc;border-left:4px solid #0c5cb6;margin:1.5rem 0}
+table{border-collapse:collapse;width:100%;margin:1rem 0}
+th,td{padding:0.5rem 0.75rem;border:1px solid #ddd;text-align:left}
+th{background:#f0f4f8}
+nav.breadcrumb{font-size:0.9rem;margin-bottom:1rem;color:#666}
+nav.breadcrumb a{color:#0c5cb6}
+ul,ol{padding-left:1.25rem}
+footer{margin-top:3rem;padding-top:1.5rem;border-top:1px solid #ddd;color:#666;font-size:0.9rem}
+a{color:#0c5cb6}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Dataset","name":"EIDL Discharge Empirical Research","description":"Empirical patterns in EIDL and SBA-loan discharge in federal bankruptcy.","url":"https://eidl.openbankruptcyproject.org/research/","creator":{"@type":"Organization","name":"Open Bankruptcy Project","taxID":"41-5159631"},"license":"https://creativecommons.org/licenses/by/4.0/"}
+</script>
+</head>
+<body>
+<nav class="breadcrumb"><a href="../">EIDL Hub</a> &raquo; Research</nav>
+<span class="tag">Open Bankruptcy Project</span>
+<h1>EIDL Discharge &mdash; Empirical Research</h1>
+<p class="lead">Open dataset and analysis of EIDL and SBA-loan discharge proceedings
+in U.S. bankruptcy courts. Filing volume, fraud-AP rates, and post-COVID trends.
+Methodology and data versioned in the public repository.</p>
+
+<div class="callout">
+<h3>Status: dataset assembly in progress</h3>
+<p>The COVID-EIDL portfolio &mdash; approximately 4 million loans totaling $390+
+billion &mdash; is now five years past origination. Default and bankruptcy
+patterns are emerging but the full empirical picture takes time to develop.
+This research page tracks what we are pulling from public bankruptcy court records
+(CourtListener, RECAP, PACER) plus SBA OIG public reporting.</p>
+</div>
+
+<h2>What we are tracking</h2>
+<ul>
+<li><strong>EIDL/SBA fraud APs</strong>: § 523(a)(2)/(4)/(6) adversary proceedings
+filed by SBA, DOJ, or DOJ Civil Division naming SBA as the holder. Fraud-AP
+volume is the strongest signal of OIG referral pipeline.</li>
+<li><strong>Sub V plan treatment of EIDL</strong>: how Subchapter V plans
+classify and pay EIDL claims, and what recovery rates look like.</li>
+<li><strong>Personal-guarantee cases</strong>: Chapter 7 individual filings
+where EIDL is listed; what fraction draws an SBA AP vs. routine discharge.</li>
+<li><strong>Treasury Offset stays</strong>: § 362(k) damages awards for
+post-petition TOP offsets.</li>
+</ul>
+
+<h2>Public-source signals (current)</h2>
+
+<table>
+<tr><th>Source</th><th>What it tells us</th><th>Latest data point</th></tr>
+<tr><td>SBA OIG public reports</td><td>Fraud investigations opened, dollar amounts</td><td>~12,000+ COVID-EIDL fraud investigations opened since 2021</td></tr>
+<tr><td>DOJ press releases</td><td>Indictments, civil resolutions</td><td>Hundreds of EIDL fraud prosecutions; ongoing</td></tr>
+<tr><td>SBA portfolio reporting</td><td>Loan default and charge-off counts</td><td>EIDL portfolio: $390B+ outstanding; rising default rate</td></tr>
+<tr><td>CourtListener / RECAP</td><td>Bankruptcy AP filings naming SBA</td><td>Dataset assembly in progress; preliminary pull suggests substantial increase 2024-2026 vs 2020-2022</td></tr>
+</table>
+
+<h2>Methodology (planned)</h2>
+<ol>
+<li>Identify defendants matching SBA / U.S. Small Business Administration / United States of America (where SBA is the lending agency) in CourtListener AP filings.</li>
+<li>Classify by chapter (7, 11, 13, Sub V), § 523 ground (a)(2)(A), (a)(2)(B), (a)(4), (a)(6), and outcome (pending, dismissed, judgment for defendant, judgment for plaintiff, settled).</li>
+<li>Cross-reference with SBA OIG investigation public listings where available.</li>
+<li>Publish dataset under CC BY 4.0 with versioned methodology.</li>
+</ol>
+
+<h2>Why this matters</h2>
+<p>The COVID-EIDL portfolio is the largest disaster-loan portfolio in SBA
+history. Default and discharge patterns over the next 3-5 years will define
+the practical answer to a question many borrowers and counsel are asking now:
+<strong>can a EIDL loan be discharged in bankruptcy?</strong> The doctrinal
+answer is yes (subject to fraud carve-outs). The empirical answer &mdash; what
+actually happens in court &mdash; is what this research will track.</p>
+
+<div class="related">
+<strong>Related:</strong>
+<a href="../">EIDL hub</a> &middot;
+<a href="../personal-guarantee/">Personal guarantee</a> &middot;
+<a href="../fraud-and-eidl/">Fraud carve-outs</a> &middot;
+<a href="https://eidl-screener.openbankruptcyproject.org/">Screener</a> &middot;
+<a href="https://523a8.openbankruptcyproject.org/">§ 523(a)(8) research (parallel student-loan project)</a>
+</div>
+
+<footer>
+<p>Methodology and dataset versioned in the public repository.
+<strong>Open Bankruptcy Project</strong> &mdash; 501(c)(3) public charity (EIN 41-5159631).
+<a href="https://openbankruptcyproject.org/">openbankruptcyproject.org</a></p>
+</footer>
+</body>
+</html>
