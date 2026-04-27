@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://eidl.openbankruptcyproject.org/sitemap.xml
